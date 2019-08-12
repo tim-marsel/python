@@ -1,0 +1,59 @@
+# привет! я тут по-быстрому занял твой проект. Если что - пиши в иснту - tim_marsel
+def task():
+    print("\nСледующее задание!")
+
+
+def smile():
+    print(" :) "*100)
+    print("Это улыбка добра!")
+
+
+def hello():
+    print("Дратути, " + username.title() + ". Давай немножко попитоним!")
+    age = input("Вам есть 18 лет? Напиши  \"да\" или \"нет\": ")
+    if age == "да":
+        print("Понеслась!")
+    elif age == "нет":
+        print("Заходишь на свой страх и риск!")
+    else:
+        print("Ни да, ни нет... странный ты человек.")
+
+
+print("Ветвление! Проверка на True or False.")
+apples = 10
+print(apples < 20 and apples > 5)
+print(apples < 10 and apples > 5)
+print(apples <= 20 and apples > 5)
+print(apples < 3 and apples > 7)
+print(apples < 3 and apples > 15)
+print(apples < 3 and apples > 10)
+print(not(apples < 3))
+print("Если нет скобок, то сначала выполняется отрицание (not)!")
+print(not apples < 20 or apples > 5)
+print("Трям!")
+print(not apples < 3 or apples <15 and apples > 5)
+print(not (apples < 3 or apples < 15) and apples > 5)
+
+smile()
+task()
+
+print("ДР 28.07. Давай проверим условие!")
+day = 28
+month = 7
+ask_day = int(input("Введите день: "))
+ask_month = int(input("Введите число месяца: "))
+print(ask_day == day and ask_month == month)  # если ДР, то совпадает и ДЕНЬ и МЕСЯЦ
+print(ask_day != day or ask_month != month)  # если не ДР, то может не совпасть или день или месяц (поэтому or)
+
+task()
+
+# сравнение длины строк, функиця len
+dog = "Гав, гав!"
+print(len(dog) > 5)
+print("соб" in "собака") # наличие символов в строке
+
+
+print("\nЗанятие №2. 12 августа 2019 года.")
+username = input("Как тебя зовут, новый юзер? Введи сюда: ")
+hello()
+
