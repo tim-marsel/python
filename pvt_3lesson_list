@@ -29,6 +29,9 @@ a = Asking
 e = Emoji
 m = My_lists
 
+
+
+
 print("Добавление элемента!")
 list1 = ["Гав", "Мяу"]
 list2 = [1, 2, 3]
@@ -103,9 +106,3 @@ elif ask == "нет":
     m.list_bad()
     e.bad_smile()
     a.ask_ready()
-
-
-
-
-
-
