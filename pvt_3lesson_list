@@ -1,1 +1,91 @@
-# Трям, сегодня работаем с массивами
+class Emoji:
+    def good_smile():
+        print(" :) " * 5)
+        print("\nЧудненько! Продолжим!")
+    def bad_smile():
+        print("\_oJ_/" * 5)
+        print("\nКак так-то? Расстраиваешь!")
+
+
+class My_lists:
+    def list_good():
+        good_person = ["молодец", "ударник", "сильный", "крутой"]
+        print(good_person)
+        print("Вот такой списочек!")
+    def list_bad():
+        bad_person = ["редиска", "гадина", "ленивец", "утконос"]
+        print(bad_person)
+        print("Вот такой списочек!")
+
+class Asking:
+    def ask_ready():
+        ready = input("Списки учить будем, бро? Ответь: ")
+        if ready == "да":
+            e.good_smile()
+        elif ready == "нет":
+            e.bad_smile()
+
+
+num = [1, 2, 3, 4, 5]  # список
+print(num)
+num[0] = "yes"  # меняем значение
+num[2] = "no"  # меняем значение
+num[3] = [1, 2, 3]  # меняем значение, создавая вложенный список
+print(num)
+
+
+list_friends = ["Костя", "Егор", "Алесь", "Ян", 20, "последний элемент"]  # список
+print(list_friends)
+print(list_friends[2])  # обращение ко второму индексу
+print("Поменяем значение второго индекса!")
+list_friends[2] = "Валера"
+print(list_friends[-1])  # вывод последнего элемента из списка
+print(list_friends)
+
+print("\nМногоуровневый список!")
+triple_list = [["ржавый", 21, 24, "добросердечный"], ["meow", 22, "ku"], ["moon", "ork", 78]]
+print(triple_list[2][2])  # третий список, третье значение (внимание на индексы!!!)
+
+
+
+
+print("Проверка. Введёте число или не число!")  # очень важно!!! Проверка символов строки!
+symbol = input()
+numbers = "0123456789"
+while symbol not in numbers:
+    print("Вы ввели НЕ число! Введите число!")
+    symbol = input()
+n = int(symbol)
+print("Спасибо за ввод числа!")  # конец программы
+
+print("\n\n\nВведи число!")  # будет отсчет и лесенка
+n = int(input())
+for line in range(n+1):
+    for space in range(line):
+        print(" ", end=" ")
+    for number in range(n-line+1):
+        print(number, end=" ")
+    print()   # конец программы
+
+a = Asking
+e = Emoji
+m = My_lists
+
+print("\nПопробуем вызвать список из функции!")  # давай поработаем со списками
+ask = input("Список нннада?")
+if ask == "да":
+    print("\nВот кто ты: ")
+    m.list_good()
+    e.good_smile()
+    a.ask_ready()
+elif ask == "нет":
+    print("\nВот кто ты: ")
+    m.list_bad()
+    e.bad_smile()
+    a.ask_ready()
+
+
+
+
+
+
