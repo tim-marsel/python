@@ -1,6 +1,6 @@
 class Emoji:
     def good_smile():
-        print(" :) " * 5)
+        print(" \n:) " * 5)
         print("\nЧудненько! Продолжим!")
     def bad_smile():
         print("\_oJ_/" * 5)
@@ -25,22 +25,45 @@ class Asking:
         elif ready == "нет":
             e.bad_smile()
 
+a = Asking
+e = Emoji
+m = My_lists
+
+print("Добавление элемента!")
+list1 = ["Гав", "Мяу"]
+list2 = [1, 2, 3]
+print(list1)
+print(list2)
+list2 = list1
+list1.append("Мууу")  # оператор добавление
+print("Добавили что-то!")
+print(list1)
+print(list2)
 
 num = [1, 2, 3, 4, 5]  # список
 print(num)
 num[0] = "yes"  # меняем значение
 num[2] = "no"  # меняем значение
 num[3] = [1, 2, 3]  # меняем значение, создавая вложенный список
+num[3][2] = [5, 4, 3, 2, "one"]
+print(num)
+print("Поменяем one на другое значение")
+num[3][2][-1] = "ПОСЛЕДЕНЕЕ!"  # обратились к списку в списке
 print(num)
 
+e.good_smile()
 
+print("Список друзей!")
 list_friends = ["Костя", "Егор", "Алесь", "Ян", 20, "последний элемент"]  # список
 print(list_friends)
 print(list_friends[2])  # обращение ко второму индексу
 print("Поменяем значение второго индекса!")
-list_friends[2] = "Валера"
+list_friends[2] = "Валера"  # меняем значение переменной
 print(list_friends[-1])  # вывод последнего элемента из списка
 print(list_friends)
+len_friend = (len(list_friends))  # посчитал кол-во друзей и записал в переменную
+len_str = str(len_friend)  # перевёл в стороковое значение
+print("У тебя " + len_str + " друзей!")  # вывесл на экран
 
 print("\nМногоуровневый список!")
 triple_list = [["ржавый", 21, 24, "добросердечный"], ["meow", 22, "ku"], ["moon", "ork", 78]]
@@ -67,9 +90,6 @@ for line in range(n+1):
         print(number, end=" ")
     print()   # конец программы
 
-a = Asking
-e = Emoji
-m = My_lists
 
 print("\nПопробуем вызвать список из функции!")  # давай поработаем со списками
 ask = input("Список нннада?")
