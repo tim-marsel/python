@@ -1,0 +1,43 @@
+import datetime
+
+
+class Emoji:
+	def happy():
+		print("Correct!")
+		print (list_emoji[0])
+	def sad():
+		print("Incorrect!")
+		print (list_emoji[1])
+	def prepare():
+		ask_prepare = input("Are you ready? Print  here Y or N: ")
+		if ask_prepare == "Y":
+			print ("Nice! Let's start!" * 20)
+		if ask_prepare == "N":
+			print ("No-no-no! You are ready!")
+		else: 
+			print ("You are strange")
+		print (list_emoji[2])
+
+e = Emoji
+
+list_emoji = ["^_^",":(","\_oO_/",";)"]
+list_lang = ["python","java","c+","swift"]
+
+
+today_time = datetime.datetime.today() # импортируем дату и время (занесли в переменную)
+print(today_time) 
+
+print ("\nЯ родился в это время. 14  апреля 1990 года.") # пересчет кол-ва времени, которое прошло
+then = datetime.datetime(1990, 4, 14)
+print ("А сколько же дней прошло с моего рождения?")
+now = datetime.datetime.now()
+delta = now - then
+print("Я прожил столько дней: ")
+print (delta.days)
+
+
+username = input ("\nНапиши своё имя сюда: ")
+print ("Покодим немножк, " + username.title() + " " + list_emoji[3])
+e.prepare()
+
+
